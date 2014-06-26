@@ -93,7 +93,7 @@ exports.init = function(grunt) {
           sourceMapPath = filename;
           sourceContent = new Buffer(RegExp.$1, 'base64').toString();
         } else {
-          if (path.isAbsolute(sourceMapFile)) {
+          if (path.resolve(sourceMapFile) === sourceMapFile) {
             sourceMapPath = sourceMapFile;
           } else {
             // Set sourceMapPath relative to file that is refering to it.
