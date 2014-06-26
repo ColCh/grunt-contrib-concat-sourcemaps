@@ -1,6 +1,6 @@
-# grunt-contrib-concat v0.5.0-pre [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-concat.png?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-concat) <a href="https://ci.appveyor.com/project/gruntjs/grunt-contrib-concat"><img src="https://ci.appveyor.com/api/projects/status/43qbw6jsp3rb2rh6/branch/master" alt="Build Status: Windows" height="18" /></a>
+# grunt-contrib-concat-sourcemaps v0.6.0 [![Build Status: Linux](https://travis-ci.org/Krinkle/grunt-contrib-concat-sourcemaps.png?branch=master)](https://travis-ci.org/Krinkle/grunt-contrib-concat-sourcemaps)
 
-> Concatenate files.
+> Concatenate files (with support for source maps).
 
 
 
@@ -10,13 +10,13 @@ This plugin requires Grunt `~0.4.0`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-contrib-concat --save-dev
+npm install grunt-contrib-concat-sourcemaps --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-contrib-concat');
+grunt.loadNpmTasks('grunt-contrib-concat-sourcemaps');
 ```
 
 
@@ -79,6 +79,24 @@ _(Default processing options are explained in the [grunt.template.process][] doc
 
   [templates]: https://github.com/gruntjs/grunt-docs/blob/master/grunt.template.md
   [grunt.template.process]: https://github.com/gruntjs/grunt-docs/blob/master/grunt.template.md#grunttemplateprocess
+
+#### sourceMap
+Type: `Boolean`
+Default: `false`
+
+Set to true to create a source map. The source map will be created alongside the destination file, and share the same file name with the `.map` extension appended to it.
+
+#### sourceMapName
+Type: `String` `Function`
+Default: `undefined`
+
+To customize the name or location of the generated source map, pass a string to indicate where to write the source map to. If a function is provided, the concat destination is passed as the argument and the return value will be used as the file name.
+
+#### sourceMapStyle
+Type: `String`
+Default: `embed`
+
+Determines the type of source map that is generated. The default value, `embed`, places the content of the sources directly into the map. `link` will reference the original sources in the map as links. `inline` will store the entire map as a data URI in the destination file.
 
 ### Usage Examples
 
@@ -277,4 +295,4 @@ grunt.initConfig({
 
 Task submitted by ["Cowboy" Ben Alman](http://benalman.com/)
 
-*This file was generated on Fri Jun 13 2014 23:50:42.*
+*This file was generated on Thu Jun 26 2014 16:21:54.*

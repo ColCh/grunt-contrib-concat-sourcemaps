@@ -1,3 +1,10 @@
+v0.6.0:
+  date: 2014-06-26
+  changes:
+    - readme: Update for release.
+    - sourcemap: Don't use path.isAbsolute.
+    - Add sourceMap option.
+    - Fix the bug when stripBanner option both set true.
 v0.4.0:
   date: 2014-03-21
   changes:

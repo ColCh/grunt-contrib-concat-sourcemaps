@@ -1,23 +1,23 @@
 {
-  "name": "grunt-contrib-concat",
-  "description": "Concatenate files.",
-  "version": "0.5.0-pre",
-  "homepage": "https://github.com/gruntjs/grunt-contrib-concat",
+  "name": "grunt-contrib-concat-sourcemaps",
+  "description": "Concatenate files (with support for source maps).",
+  "version": "0.6.0",
+  "homepage": "https://github.com/Krinkle/grunt-contrib-concat-sourcemaps",
   "author": {
     "name": "Grunt Team",
     "url": "http://gruntjs.com/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/gruntjs/grunt-contrib-concat.git"
+    "url": "git://github.com/Krinkle/grunt-contrib-concat-sourcemaps.git"
   },
   "bugs": {
-    "url": "https://github.com/gruntjs/grunt-contrib-concat/issues"
+    "url": "https://github.com/Krinkle/grunt-contrib-concat-sourcemaps/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/gruntjs/grunt-contrib-concat/blob/master/LICENSE-MIT"
+      "url": "https://github.com/Krinkle/grunt-contrib-concat-sourcemaps/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
