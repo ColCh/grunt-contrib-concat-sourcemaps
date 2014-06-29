@@ -167,6 +167,9 @@ exports.init = function(grunt) {
       );
       return JSON.stringify(newSourceMap, null, '');
     } else {
+      if (this.options.sourceRoot) {
+        newSourceMap.sourceRoot = this.options.sourceRoot;
+      }
       grunt.file.write(
         this.dest,
         JSON.stringify(newSourceMap, null, '')
