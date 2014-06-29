@@ -71,7 +71,7 @@ exports.init = function(grunt) {
   SourceMapConcatHelper.prototype.addlines = function(src, filename) {
     var lines = src.split('\n');
 
-    var relativeFilename = path.relative(path.dirname(this.dest), filename);
+    var relativeFilename = path.relative(path.dirname(this.dest), filename).replace(/\\/g, '/');;
 
     src = lines.map(function(line, j) {
       // Add back a linefeed to all but the last line.
