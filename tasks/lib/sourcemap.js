@@ -73,6 +73,12 @@ exports.init = function(grunt) {
 
     var relativeFilename = path.relative(path.dirname(this.dest), filename).replace(/\\/g, '/');;
 
+    if(this.options.prefix) {
+      for (var prefixCounter = 0; prefixCounter < this.options.prefix; prefixCounter++) {
+        relativeFilename = relativeFilename.substring(relativeFilename.indexOf('/') + 1);
+      }
+    }
+
     src = lines.map(function(line, j) {
       // Add back a linefeed to all but the last line.
       if (j < lines.length - 1) {

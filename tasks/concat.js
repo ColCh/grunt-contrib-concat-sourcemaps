@@ -26,7 +26,8 @@ module.exports = function(grunt) {
       sourceMap: false,
       sourceMapName: undefined,
       sourceMapStyle: 'embed',
-      sourceRoot: '.'
+      sourceRoot: '.',
+      prefix: 0
     });
 
     // Normalize boolean options that accept options objects.
