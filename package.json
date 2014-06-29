@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "chalk": "~0.4.0",
-    "source-map": "~0.1.33"
+    "source-map": "^0.1.34"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.10.0",
