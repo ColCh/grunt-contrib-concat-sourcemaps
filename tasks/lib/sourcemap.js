@@ -119,7 +119,7 @@ exports.init = function(grunt) {
         line = line.replace(/[@#]\s+sourceMappingURL=[^\s]+/, '');
       }
 
-      this.node.add(new SourceNode(j + 1, 0, relativeFilename, line + 1));
+      this.node.add(new SourceNode(j + 1, 0, relativeFilename, line));
       return line;
     }, this).join('');
 
