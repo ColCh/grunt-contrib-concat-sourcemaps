@@ -69,7 +69,7 @@ exports.init = function(grunt) {
   // Add the lines of a given file to the sourcemap. If in the file, store a
   // prior sourcemap and return src with sourceMappingURL removed.
   SourceMapConcatHelper.prototype.addlines = function(src, filename) {
-    var lines = src.split('\n');
+    var lines = src.split(grunt.util.linefeed);
 
     var relativeFilename = path.relative(path.dirname(this.dest), filename).replace(/\\/g, '/');;
 
@@ -82,7 +82,7 @@ exports.init = function(grunt) {
     src = lines.map(function(line, j) {
       // Add back a linefeed to all but the last line.
       if (j < lines.length - 1) {
-        line += '\n';
+        line += grunt.util.linefeed;
       }
 
       if (
